@@ -4,43 +4,55 @@ body {
     padding: 0;
 }
 
-/* Container untuk Data Pribadi dan Tentang */
+/* Container untuk Data Pribadi & Tentang */
 .DataPribadi, .Tentang {
     background-color: gray;
     margin: 20px auto;  /* Tengah otomatis */
-    padding: 30px;  /* Kurangi padding agar lebih rapi */
+    padding: 30px;
     width: 90%;  /* Gunakan persentase agar fleksibel */
     max-width: 600px;  /* Batasi lebar maksimum */
     text-align: center;
-    border-radius: 10px;  /* Biar lebih smooth */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Styling untuk gambar */
 .poto img {
     width: 150px;  /* Ukuran gambar dibatasi */
     height: 150px;
-    border-radius: 50%;  /* Biar foto jadi lingkaran */
-    object-fit: cover;  /* Pastikan gambar tetap proporsional */
+    border-radius: 50%;  /* Agar gambar bulat */
+    object-fit: cover;
     display: block;
     margin: 20px auto;
 }
 
-/* Styling untuk teks */
-#p1 {
-    color: black;
-    border-bottom: 3px solid blue;
-    display: inline-block;
+/* Menghindari overflow di HP */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
-/* 🔹 Media Query untuk layar kecil */
+/* Menghindari teks atau tabel terlalu lebar */
+table {
+    width: 100%;
+}
+
+/* Responsif untuk layar kecil */
 @media (max-width: 600px) {
     .DataPribadi, .Tentang {
-        width: 95%; /* Lebih fleksibel di layar kecil */
+        width: 95%;  /* Lebih fleksibel di layar kecil */
         padding: 20px;
     }
 
     .poto img {
-        width: 120px; 
+        width: 120px;
         height: 120px;
+    }
+
+    /* Memastikan input field tidak melebar */
+    input {
+        font-size: 14px;
     }
 }
