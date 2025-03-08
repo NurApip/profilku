@@ -1,34 +1,46 @@
 body {
     background-color: rgb(126, 120, 120);
+    margin: 0;
+    padding: 0;
 }
 
-.DataPribadi {
-    background-color:rgb(226, 168, 61) ;
-    margin: 100px;
-
-    padding: 70px;
-    
+/* Container untuk Data Pribadi dan Tentang */
+.DataPribadi, .Tentang {
+    background-color: gray;
+    margin: 20px auto;  /* Tengah otomatis */
+    padding: 30px;  /* Kurangi padding agar lebih rapi */
+    width: 90%;  /* Gunakan persentase agar fleksibel */
+    max-width: 600px;  /* Batasi lebar maksimum */
+    text-align: center;
+    border-radius: 10px;  /* Biar lebih smooth */
 }
 
-.Tentang {
-    background-color:rgb(226, 168, 61) ;
-    margin: 100px;
-    justify-self: center;
-    padding: 70px;
-}
-
+/* Styling untuk gambar */
 .poto img {
-    justify-self: center;
-    border-radius: 50%; 
-    overflow: hidden;
-    width: 150px;
-    height: 150px; 
-     
-    
+    width: 150px;  /* Ukuran gambar dibatasi */
+    height: 150px;
+    border-radius: 50%;  /* Biar foto jadi lingkaran */
+    object-fit: cover;  /* Pastikan gambar tetap proporsional */
+    display: block;
+    margin: 20px auto;
 }
 
+/* Styling untuk teks */
 #p1 {
     color: black;
     border-bottom: 3px solid blue;
     display: inline-block;
+}
+
+/* 🔹 Media Query untuk layar kecil */
+@media (max-width: 600px) {
+    .DataPribadi, .Tentang {
+        width: 95%; /* Lebih fleksibel di layar kecil */
+        padding: 20px;
+    }
+
+    .poto img {
+        width: 120px; 
+        height: 120px;
+    }
 }
